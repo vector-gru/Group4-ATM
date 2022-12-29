@@ -4,79 +4,55 @@
 
 #include "Account.h"
 
-//  Represent a bank account
-class Account {
-    /** generated source for class Account */
-    int accountNumber;
 
-    //  account number
-    int pin;
+namespace atmcasestudy
+{
 
-    //  PIN for authentication
-    float availableBalance;
+    Account::Account(int theAccountNumber, int thePIN, double theAvailableBalance, double theTotalBalance)
+    {
 
-    //  funds available for withdrawal
-    float totalBalance;
-
-    //  funds available + pending deposits
-    //  Account constructor initializes attribues
-public Account(int theAccountNumber, int thePIN, float theAvailableBalance, float theTotalBalance) {
-        /** generated source for method __init__ */
         accountNumber = theAccountNumber;
         pin = thePIN;
         availableBalance = theAvailableBalance;
         totalBalance = theTotalBalance;
-    }
+    } // end constructor
 
-    //  end constructor
-    //  determines whether a user-specified PIN matches PIN in Account
-public boolean validatePIN(int userPIN) {
-        /** generated source for method validatePIN */
-        if (userPIN == pin) {
+    bool Account::validatePIN(int userPIN)
+    {
+        if (userPIN == pin)
+        {
             return true;
-        } else {
+        }
+        else
+        {
             return false;
         }
-    }
+    } // end method validatePIN
 
-    //  end method validatePIN
-    //  returns available balance
-public float getAvailableBalance() {
-        /** generated source for method getAvailableBalance */
+    double Account::getAvailableBalance()
+    {
         return availableBalance;
-    }
+    } // end method getAvailableBalance
 
-    //  end method getAvailableBalance
-    //  return the total balance
-public float getTotalBalance() {
-        /** generated source for method getTotalBalance */
+    double Account::getTotalBalance()
+    {
         return totalBalance;
-    }
+    } // end method getTotlalBalance
 
-    //  end method getTotlalBalance
-    //  credits an amount to the account
-public void credit(float amount) {
-        /** generated source for method credit */
-        totalBalance += amount;
-        //  add to total balance
-    }
+    void Account::credit(double amount)
+    {
+        totalBalance += amount; // add to total balance
+    } // end method credit
 
-    //  end method credit
-    // debits an amount from the account
-public void debit(float amount) {
-        /** generated source for method debit */
-        availableBalance -= amount;
-        //  subtract from available balance
-        totalBalance -= amount;
-        //  subtract from the total balance
-    }
+    void Account::debit(double amount)
+    {
+        availableBalance -= amount; // subtract from available balance
+        totalBalance -= amount; // subtract from the total balance
+    } // end method debit
 
-    //  end method debit
-    // return account number
-public int getAccountNumber() {
-        /** generated source for method getAccountNumber */
+    int Account::getAccountNumber()
+    {
         return accountNumber;
-    }
+    } // end method getAccountNumber
+}
 
-    //  end method getAccountNumber
-};
