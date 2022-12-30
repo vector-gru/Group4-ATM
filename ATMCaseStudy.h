@@ -6,7 +6,7 @@
 #define GROUP4_ATM_ATMCASESTUDY_H
 
 #pragma once
-
+#include <iostream>
 #include <string>
 
 /*

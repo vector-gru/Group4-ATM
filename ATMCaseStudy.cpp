@@ -2,6 +2,7 @@
 // Created by PopeLouis on 30/12/2022.
 //
 
+#include <iostream>
 #include "ATMCaseStudy.h"
 
 #include "ATM.h"
