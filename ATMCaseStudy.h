@@ -26,7 +26,7 @@ namespace atmcasestudy
     {
 
         /// <param name="args"> the command line arguments </param>
-        static void main(std::wstring args[]);
+       // static void main(std::wstring args[]);
 
     }; //end class ATMCasestudy
 

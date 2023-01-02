@@ -3,18 +3,24 @@
 //
 
 #include "Keypad.h"
+#include <iostream>
 
 
 namespace atmcasestudy
+
 {
+    using namespace std;
+
 
     Keypad::Keypad()
     {
-        input = new Scanner(System::in);
+        cin >> input;
+       // input = new Scanner(System::in);
     } // end no-arguement Keypad constructor
 
     int Keypad::getInput()
     {
-        return input->nextInt(); // we assume that the user enters an integer
+        cin >> input;
+        return input; // we assume that the user enters an integer
     } // end method getInput
 }

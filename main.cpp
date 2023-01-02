@@ -1,12 +1,13 @@
 #include <iostream>
+#include "ATM.h"
+#include <string>
 
 
-#include <iostream>
+//int main()
+//{
 
-int main()
-{
-
-//    std::cout << "Speed: " << car.GetSpeed() << std::endl;
-
-    return 0;
-}
+////    std::cout << "Speed: " << car.GetSpeed() << std::endl;
+//    ATM theATM = *new ATM();
+//    theATM.run()
+//    return 0;
+//}

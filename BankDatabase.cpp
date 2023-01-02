@@ -20,14 +20,19 @@ namespace atmcasestudy
     {
 
         // loop through accounts searching for matching account number
-        for (auto currentAccount : accounts)
+//        for (const auto &currentAccount : accounts)
+         for (int i=0; i<2; i++)
         {
 
             // return current account if match found
-            if (currentAccount->getAccountNumber() == accountNumber)
-            {
-                return currentAccount;
+            if(accounts[i]->getAccountNumber() == accountNumber) {
+                return accounts[i];
             }
+
+//            if (currentAccount->getAccountNumber() == accountNumber)
+//            {
+//                return currentAccount;
+//            }
         } // end for
 
         return nullptr; // if no matching account was foundm return null
