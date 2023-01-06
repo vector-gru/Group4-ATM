@@ -5,6 +5,8 @@
 #include "Screen.h"
 #include "Screen.h"
 
+//using std::fixed;
+//using std::setprecision;
 namespace atmcasestudy
 {
 
@@ -20,6 +22,8 @@ namespace atmcasestudy
 
     void Screen::displayDollarAmount(double amount)
     {
-        printf(reinterpret_cast<const char *>(L"$%, .2f"), amount);
+        std::cout << "$ " << amount;
+        //printf(reinterpret_cast<const char *>(L"$%, .2f"), amount);
+        //std::cout <<std::format("${}")
     } // end method displayDollarAmount
 }

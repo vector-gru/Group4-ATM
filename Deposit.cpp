@@ -62,9 +62,9 @@ namespace atmcasestudy
         Screen *screen = getScreen(); // get reference to screen
 
         // display the prompt
-        screen->displayMessage(std::wstring(L"\nPlease enter a deposit amount") + std::wstring(L"in CENTS (or 0 to cancel"));
+        screen->displayMessage(std::wstring(L"\nPlease enter a deposit amount ") + std::wstring(L"in CENTS (or 0 to cancel): "));
 
-        int input = keypad->getInput(); // receive input of deposit amount
+        double input = keypad->getInput(); // receive input of deposit amount
 
         // check whether the user canceled or entered a valid amount
         if (input == CANCELED)

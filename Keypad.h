@@ -44,14 +44,14 @@ namespace atmcasestudy {
     class Keypad
     {
     private:
-        int input{}; // reads data from the command line
+        double input{}; // reads data from the command line
 
         // no-argument constructor initializes the Scanner
     public:
         Keypad();
 
         // return an integer value entered by user
-        virtual int getInput();
+        virtual double getInput();
 
     }; // end class Keypad
 

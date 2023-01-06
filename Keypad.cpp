@@ -14,11 +14,11 @@ namespace atmcasestudy
 
     Keypad::Keypad()
     {
-        cin >> input;
+        //cin >> input;
        // input = new Scanner(System::in);
     } // end no-arguement Keypad constructor
 
-    int Keypad::getInput()
+    double Keypad::getInput()
     {
         cin >> input;
         return input; // we assume that the user enters an integer
